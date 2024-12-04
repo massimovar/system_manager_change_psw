@@ -9,8 +9,32 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [1,2],
+    "Dimensions": [25,2],
     "Body": [
-     "","en-US"
+     "","en-US",
+     "ApplicationName","Application name",
+     "Reboot","Reboot",
+     "DeviceName","Device name",
+     "DisableApplicationAndFirmwareUpdates","Disable application and firmware updates",
+     "CatalogNumber","Catalog #",
+     "CPUTemperature","CPU temperature",
+     "ProductName","Product name",
+     "CPUUtilization","CPU utilization",
+     "LastDeploy","Last deploy",
+     "LastReboot","Last reboot",
+     "FreeMemory","Free memory",
+     "UsedMemory","Used memory",
+     "PowerOnTime","Power on time",
+     "FreeStorage","Free storage",
+     "UsedStorage","Used storage",
+     "RebootToCommitChanges","Reboot to commit changes",
+     "Configuration","Configuration",
+     "ProductInformation","Product Information",
+     "Diagnostics","Diagnostics",
+     "FTOptixStudio","FT Optix Studio",
+     "OptixPanelFirmware","OptixPanel firmware",
+     "OS ","OS ",
+     "SystemManager","System Manager",
+     "Versions","Versions"
     ]
    }

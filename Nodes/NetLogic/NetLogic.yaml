@@ -1,103 +1,46 @@
 Name: NetLogic
 Type: NetLogicCategoryFolder
 Children:
-- Name: RuntimeNetLogic1
-  Id: g=bbab04f4ab5c369a2f064a91402c5fde
+- Name: SystemManager
+  Id: g=864cf3faedc70912e234a09bdb3d0e15
   Type: NetLogic
   Children:
-  - Class: Method
-    Name: DeviceImportConfiguration
-  - Class: Method
-    Name: DeviceUpdatePassword
-  - Name: newPassword
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "Password42"
-  - Name: actualPassword
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "Password43"
-  - Name: deviceIP
+  - Name: IP
     Type: BaseDataVariableType
     DataType: String
     Value: "192.168.0.10"
-- Name: RESTApiClient
-  Id: g=a3030ee2ce0c74094de9d82696981a1d
-  Type: NetLogic
-  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
-  Children:
-  - Class: Method
-    Name: Post
-    Children:
-    - Name: ns=0;InputArguments
-      Type: BaseVariableType
-      DataType: Argument
-      ReferenceType: HasProperty
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"apiUrl","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"requestBody","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"bearerToken","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"contentType","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-    - Name: ns=0;OutputArguments
-      Type: BaseVariableType
-      DataType: Argument
-      ReferenceType: HasProperty
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"response","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"code","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-  - Name: Timeout
-    Type: BaseDataVariableType
-    DataType: Duration
-    Value: "0:00:00:10.0000000"
-  - Name: UserAgent
+  - Name: user
     Type: BaseDataVariableType
     DataType: String
-    Value: "FTOptix"
+    Value: "admin"
+  - Name: password
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "Password43"
   - Class: Method
-    Name: Put
+    Name: SystemManagerLogin
     Children:
-    - Name: ns=0;InputArguments
-      Type: BaseVariableType
-      DataType: Argument
-      ReferenceType: HasProperty
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"apiUrl","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"requestBody","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"bearerToken","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"contentType","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
     - Name: ns=0;OutputArguments
       Type: BaseVariableType
       DataType: Argument
       ReferenceType: HasProperty
       ValueRank: OneDimension
       ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"response","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"code","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"loginOk","DataType":{"Id":1},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
   - Class: Method
-    Name: Get
+    Name: SystemManagerChangePassword
     Children:
-    - Name: ns=0;InputArguments
-      Type: BaseVariableType
-      DataType: Argument
-      ReferenceType: HasProperty
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"apiUrl","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"queryString","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"bearerToken","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
     - Name: ns=0;OutputArguments
       Type: BaseVariableType
       DataType: Argument
       ReferenceType: HasProperty
       ValueRank: OneDimension
       ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"response","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"code","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-  - Name: ns=9;LibraryReference
-    Type: ObjectLibraryReference
-    DataType: ObjectLibraryReferenceDataType
-    Value: 
-     {
-      "TypeId": {
-       "Id": 72,
-       "Namespace": 9
-      },
-      "Body": {
-       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
-       "objectGuid": "6dffd8c85dd908ae3157cc77d4387dcc",
-       "objectVersion": 1,
-       "highestIgnoredVersion": 0
-      }
-     }
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"changePasswordOk","DataType":{"Id":1},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"newPassword","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
